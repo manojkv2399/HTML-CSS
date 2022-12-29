@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix another method</title>
+
+    <style>
+        img{
+            float: right;
+        }
+
+        div{
+            padding: 5px;
+            border: 2px solid;
+        }
+
+        div.clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <h2>without clearfix</h2>
+    
+    <div>
+        <img src="https://i.pinimg.com/564x/9b/a2/57/9ba25796112cad616be27e473ae1e149--kids-cartoon-characters-childhood-characters.jpg" alt="" width="250px">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus corrupti neque quaerat modi ea fugiat laboriosam aspernatur accusantium culpa. Sunt quo necessitatibus quia eligendi aspernatur. Minima nemo nam quas voluptatem?</p>
+    </div>
+    <h2>with clearfix</h2>
+    <div class="clearfix">
+        <img src="https://i.pinimg.com/564x/9b/a2/57/9ba25796112cad616be27e473ae1e149--kids-cartoon-characters-childhood-characters.jpg" alt="" width="250px">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus corrupti neque quaerat modi ea fugiat laboriosam aspernatur accusantium culpa. Sunt quo necessitatibus quia eligendi aspernatur. Minima nemo nam quas voluptatem?</p>
+    </div>
+</body>
+</html>
